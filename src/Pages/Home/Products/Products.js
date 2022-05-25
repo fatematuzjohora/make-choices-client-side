@@ -1,8 +1,17 @@
+import { useEffect, useState } from "react";
 import useProducts from "../../../hooks/useProducts";
 import Product from "./Product";
 
 const Products = () => {
-  const [products] = useProducts();
+  
+const [products,setProducts] = useState()
+useEffect(() => {
+  fetch("http://localhost:5000/product")
+    .then((res) => res.json())
+    .then((data) => {
+      setProducts(data);
+    });
+}, []);
   return (
     <div className="mx-7">
       <div className=" my-7 flex justify-center items-center">
