@@ -4,7 +4,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import swal from "sweetalert";
 import auth from "../../firebase.init";
 
-
 const PurchaseDetail = () => {
   const [user] = useAuthState(auth);
   const [purchase, setPurchase] = useState({});
@@ -52,14 +51,17 @@ const PurchaseDetail = () => {
       swal("Oops!", "You can't buy less than the minimum quantity", "error");
       return;
     } else {
-      fetch(` http://localhost:5000/purchase/${productId}`, {
-        method: "PUT",
-        headers: {
-          "content-type": "application/json",
-          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-        },
-        body: JSON.stringify(total),
-      })
+      fetch(
+        ` https://boiling-scrubland-64435.herokuapp.com/purchase/${productId}`,
+        {
+          method: "PUT",
+          headers: {
+            "content-type": "application/json",
+            authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+          },
+          body: JSON.stringify(total),
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           console.log("successfully", data);
@@ -74,13 +76,16 @@ const PurchaseDetail = () => {
   };
 
   useEffect(() => {
-    fetch(` http://localhost:5000/product/${productId}`, {
-      method: "GET",
-      headers: {
-        "content-type": "application/json",
-        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-      },
-    })
+    fetch(
+      ` https://boiling-scrubland-64435.herokuapp.com/product/${productId}`,
+      {
+        method: "GET",
+        headers: {
+          "content-type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         setPurchase(data);

@@ -13,7 +13,7 @@ const MyOrders = () => {
   useEffect(() => {
     if (user) {
       fetch(
-        `http://localhost:5000/orders?email=${user.email}`,
+        `https://boiling-scrubland-64435.herokuapp.com/orders?email=${user.email}`,
         {
           method: "GET",
           headers: {
@@ -132,7 +132,7 @@ export default MyOrders;
 
 //   console.log(email);
 //   useEffect(() => {
-//     fetch(` http://localhost:5000/purchase/${email}`, {
+//     fetch(` https://boiling-scrubland-64435.herokuapp.com/purchase/${email}`, {
 //       method: "GET",
 //       headers: {
 //         "Content-Type": "application/json",
@@ -142,7 +142,7 @@ export default MyOrders;
 //     .then(data => console.log(data))
 //   },[email])
 
-//   // fetch(` http://localhost:5000/purchase/${email}`, {
+//   // fetch(` https://boiling-scrubland-64435.herokuapp.com/purchase/${email}`, {
 //   //   method: "GET",
 //   //   // headers: {
 //   //   //   "content-type": "application/json",

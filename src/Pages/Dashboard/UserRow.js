@@ -6,12 +6,15 @@ const UserRow = ({ user, refetch }) => {
   const { email, role } = user;
   const [admin] = useAdmin(user);
   const makeAdmin = () => {
-    fetch(` http://localhost:5000/user/admin/${email}`, {
-      method: "PUT",
-      headers: {
-        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-      },
-    })
+    fetch(
+      ` https://boiling-scrubland-64435.herokuapp.com/user/admin/${email}`,
+      {
+        method: "PUT",
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+      }
+    )
       .then((res) => {
         if (res.status === 403) {
           swal(
@@ -32,12 +35,15 @@ const UserRow = ({ user, refetch }) => {
   };
 
   const removeAdmin = () => {
-    fetch(` http://localhost:5000/user/admin/${email}`, {
-      method: "DELETE",
-      headers: {
-        // authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-      },
-    })
+    fetch(
+      ` https://boiling-scrubland-64435.herokuapp.com/user/admin/${email}`,
+      {
+        method: "DELETE",
+        headers: {
+          // authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+      }
+    )
       .then((res) => {
         if (res.status === 403) {
           swal(

@@ -8,7 +8,7 @@ const PurchasePage = () => {
   const [refresh] = useState(0);
   const { productId } = useParams();
   useEffect(() => {
-    fetch(`http://localhost:5000/product/${productId}`)
+    fetch(`https://boiling-scrubland-64435.herokuapp.com/product/${productId}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [productId, refresh]);
@@ -21,10 +21,7 @@ const PurchasePage = () => {
             Please Confirm Your Order
           </h1>
         </div>
-        <div
-          className=" my-7 flex justify-center items-center bg-no-repeat bg-contain bg-top "
-          
-        >
+        <div className=" my-7 flex justify-center items-center bg-no-repeat bg-contain bg-top ">
           <div className="card glass shadow-xl">
             <figure>
               <img className="p-4" src={img} alt="" />

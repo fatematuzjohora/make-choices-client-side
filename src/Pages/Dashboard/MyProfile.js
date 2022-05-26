@@ -30,7 +30,7 @@ const MyProfile = (e) => {
       users.phone &&
       users.city
     ) {
-      fetch(` http://localhost:5000/profile/${email}`, {
+      fetch(` https://boiling-scrubland-64435.herokuapp.com/profile/${email}`, {
         method: "PUT",
         headers: {
           "content-type": "application/json",
@@ -54,7 +54,7 @@ const MyProfile = (e) => {
     return <Loading />;
   }
 
-  fetch(` http://localhost:5000/profile/${email}`)
+  fetch(` https://boiling-scrubland-64435.herokuapp.com/profile/${email}`)
     .then((res) => res.json())
     .then((data) => {
       setProfile(data);

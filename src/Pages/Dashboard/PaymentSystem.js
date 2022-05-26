@@ -12,7 +12,7 @@ const stripePromise = loadStripe(
 const PaymentSystem = () => {
   const { productId } = useParams();
 
-  const url = ` http://localhost:5000/purchase/${productId}`;
+  const url = ` https://boiling-scrubland-64435.herokuapp.com/purchase/${productId}`;
 
   const { data: product, isLoading } = useQuery(["booking", productId], () =>
     fetch(url, {

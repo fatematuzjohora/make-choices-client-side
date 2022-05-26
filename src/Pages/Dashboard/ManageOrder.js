@@ -6,7 +6,7 @@ const ManageOrder = () => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    fetch(" http://localhost:5000/purchase", {
+    fetch(" https://boiling-scrubland-64435.herokuapp.com/purchase", {
       method: "GET",
       headers: {
         "content-type": "application/json",

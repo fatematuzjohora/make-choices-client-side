@@ -13,13 +13,16 @@ const Payment = () => {
   console.log(products);
 
   useEffect(() => {
-    fetch(` http://localhost:5000/purchase/${productId}`, {
-      method: "GET",
-      headers: {
-        "content-type": "application/json",
-        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-      },
-    })
+    fetch(
+      ` https://boiling-scrubland-64435.herokuapp.com/purchase/${productId}`,
+      {
+        method: "GET",
+        headers: {
+          "content-type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
