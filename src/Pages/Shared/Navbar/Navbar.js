@@ -76,6 +76,14 @@ const Navbar = () => {
                   PRODUCTS
                 </ActiveLink>
               </li>
+              <li className="nav-item">
+                <ActiveLink
+                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                  to="/portfolio"
+                >
+                  PORTFOLIO
+                </ActiveLink>
+              </li>
               {user && (
                 <li className="nav-item">
                   <ActiveLink
