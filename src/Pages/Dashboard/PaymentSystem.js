@@ -18,7 +18,7 @@ const PaymentSystem = () => {
     fetch(url, {
       method: "GET",
       headers: {
-        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        // authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },
     }).then((res) => res.json())
   );

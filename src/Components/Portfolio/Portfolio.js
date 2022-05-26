@@ -4,22 +4,18 @@ const Portfolio = () => {
   return (
     <div className="bg-base-200">
       <div className=" flex flex-col justify-center items-center font-bold text-3xl text-teal-400">
-        <h1>Welcome To my Portfolio</h1>
+        <h1>Welcome To My Portfolio</h1>
       </div>
       <div className=" h-1 bg-teal-900 mx-52 my-3 rounded-full"></div>
       <div className="flex flex-col items-center">
-        <div class="avatar placeholder">
-          <div class="bg-neutral-focus text-neutral-content rounded-full w-24 ring ring-primary ring-offset-base-100 ring-offset-2">
-            <span class="text-3xl text-white font-semibold font-serif">Ns</span>
-          </div>
-        </div>
-        <div>
-          <h1 className=" font-bold text-pink-400 text-2xl font-sans">
-            Fatima tuz zuhra tonni
+        
+      <div>
+          <h1 className=" font-bold text-sky-600 text-2xl font-sans">
+            Fatima Tuz Johora
           </h1>
         </div>
         <div>
-          <h1 className=" font-bold text-pink-400 text-2xl font-sans">
+          <h1 className=" font-bold text-red-300 text-2xl font-sans">
             Email: fatematjt@gmail.com
           </h1>
         </div>
@@ -31,7 +27,7 @@ const Portfolio = () => {
           <li>Css -3</li>
           <li>JavaScript</li>
           <li>ReactJs library</li>
-          <li>Express framwork</li>
+          <li>Express framework</li>
           <li>MongoDB</li>
         </ul>
       </div>
