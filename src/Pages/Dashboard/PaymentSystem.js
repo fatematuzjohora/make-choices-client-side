@@ -33,7 +33,7 @@ const PaymentSystem = () => {
           <p className="text-success font-bold">Hello, {product.name}</p>
           <h2 className="card-title">Please Pay for {product.productName}</h2>
           <p>
-            Your Appointment:{" "}
+            Your Product Total:{" "}
             <span className="text-orange-700">${product.price}</span> Of
             Quantity :{" "}
             <span className="text-orange-700"> {product.quantity}</span>{" "}
