@@ -1,17 +1,11 @@
-import { useEffect, useState } from "react";
+
 import useProducts from "../../../hooks/useProducts";
 import Product from "./Product";
 
 const Products = () => {
   
-const [products,setProducts] = useState()
-useEffect(() => {
-  fetch("http://localhost:5000/product")
-    .then((res) => res.json())
-    .then((data) => {
-      setProducts(data);
-    });
-}, []);
+const [products] = useProducts()
+
   return (
     <div className="mx-7">
       <div className=" my-7 flex justify-center items-center">
